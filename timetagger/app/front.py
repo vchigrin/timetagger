@@ -250,7 +250,7 @@ class TimeTaggerCanvas(BaseCanvas):
         x4 = self.grid_round(x4)
 
         y0 = 0
-        y1 = self.grid_round(140)
+        y1 = self.grid_round(160)
         y3 = self.grid_round(max(y1 + 40, self.h - 15))
 
         self.widgets["TopWidget"].rect = x0, y0, x5, y1
@@ -1357,8 +1357,8 @@ class TopWidget(Widget):
         # Draw summary text
         ctx.textBaseline = "top"
         ctx.textAlign = "center"
-        ctx.font = "12px " + FONT.default
-        ctx.fillStyle = COLORS.prim2_clr
+        ctx.font = "bold " + (FONT.size * 1.4) + "px " + FONT.mono
+        ctx.fillStyle = COLORS.prim1_clr
         ctx.fillText(running_summary, (x0 + x) / 2, y + h + 5)
 
         return x0 - x
